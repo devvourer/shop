@@ -10,6 +10,15 @@
      * replace key values "PASSWORD" and "USERNAME" with the database creator
  - make migrations with database
 
-# all done
- - start server
+ - with command 'python manage.py createsuperuser' , create super user
+ - after creating user, you should go to shell(python manage.py shell)
+     * write this code :
+     * from accounts.models import User
+     * user = User.objects.get(id=1)
+     * user.is_active = True
+     * user.save()
+     * close shell
+ - run server
+ - now you can go to admin panel
+
      
